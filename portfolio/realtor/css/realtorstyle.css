@@ -1,0 +1,60 @@
+body {margin:0; padding:0; font-family: Arial, Helvetica, sans-serif; color: #518fe0;}
+
+#wrapper {width: 1000px; margin: 0 auto; border: 1px solid black; border-radius: 10px; position:relative;}
+
+#header {background-image: url("../images/house-header.jpeg"); background-repeat: no-repeat; background-position: right top; padding-top: 20px; padding-bottom: 3px; margin-right:10px; border-top-left-radius:10px; background-size: 488px 103px; background-color: #570f10; }
+h1 {color: #fff; margin-left:5px; font-size: 24px; margin-bottom: 36px;}
+
+#search fieldset{width:270px; border: 2px solid #f9b73e; border-radius: 10px; font-weight: bold; padding:12px;font-size:14px;}
+legend{padding:0px 10px; font-size:14px; font-weight:normal; }
+#form input {margin-bottom: 10px}
+
+#search {width:300px; padding-top: 20px; margin-left:10px}
+#search button {margin-top:15px;}
+#list {width:360px; margin-left: 10px; margin-top:20px;}
+h2{font-size:16px}
+
+#stored_properties {font-size: 12px; color: #000}
+#content {height:350px;}
+#content input[type="button"] {background:none; border: 1px solid black; border-top:0; border-bottom:0px; font-size:11px; color: #518fe0; }
+#content input[type="button"]:hover {cursor:pointer;}
+#content input[type="button"]:focus {outline:0;}
+
+
+#tabbedsection{position:absolute; width:600px; height: 610px; left: 370px; top: 150px; background-color:#dddddd; border-top-left-radius:40px; border-top-right-radius:40px; border-bottom-left-radius:5px; border-bottom-right-radius:5px; }
+.tabs {font-size: 12px; font-weight:bold;}
+#tabbedsection ul {
+	background-color: #f9b73e;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    padding-left:3px;
+	padding-top: 35px;
+	padding-bottom:0;
+	margin-bottom:0;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+}
+
+#tabcontent {padding:5px;}
+#tabbedsection li {display: inline-block;width:90px  }
+
+#tabbedsection a {display:inline-block; text-align:center; width:90px;padding: 15px 0;  background-color: #fff; border-top-left-radius:7px; border-top-right-radius: 7px;}
+#tabbedsection a:hover{cursor:pointer;}
+
+
+#loanCalculatorForm {}
+#tabpage_1{}
+#tabpage_2{}
+#tabpage_2 fieldset{position: relative; border: 2px solid #f9b73e; border-radius: 10px; margin-top:7px; padding-bottom:50px; }
+#loanCalculatorForm label {display: inline-block; float: left; clear: left; width: 140px; text-align: right; color:black; font-size:12px;padding-top:4px; }
+#loanCalculatorForm input {display: inline-block; float: left; width:140px; margin-right:5px; margin-left:5px; margin-bottom:12px; padding-top: }
+#calculator button {position:absolute; bottom: 27px; left: 157px; width: 144px; color:  #518fe0;}
+#loanCalculatorForm span {display: inline-block; float: left; color:red; font-size:11px; padding-top:5px;}
+
+#loanResult {position:absolute; right: 93px; top: 117px; font-weight:bold; font-size: 14px}
+
+#tabpage_3 table{border-collapse: collapse; width: 95%; margin: 10px auto;}
+#tabpage_3 thead {background-color: #518fe0; color:#fff}
+#tabpage_3 th {padding: 7px 0}
+#tabpage_3 td{border:1px solid #f9b73e; color:#000; font-size: 13px; padding:  3px;  }
