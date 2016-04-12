@@ -147,9 +147,10 @@ height: 80vh;
 
 .hero_image h1, .inner_video_overlay_wrapper h1 {
 	margin: 0 auto;
-	max-width: 860px;
+/* 	max-width: 860px; */
 	padding-top: 160px;
-	font-family: Montserrat-Light;
+	font-family: Montserrat;
+	font-weight: 200; 
 	font-size: 72px;
 	line-height: 1.2;
 	color: #ffffff;
