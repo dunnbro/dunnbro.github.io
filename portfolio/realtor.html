@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Realtor Application</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="css/foundation.min.css" />
+  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" type="text/css" href="css/style_nofloat.css">     
+</head>
+  <body id="realtor-project">
+    <div class="container-projectpage">
+      <header class="return_home nav-down"><a href="index.html">BD</a></header>
+      <section class="subpage">
+        <h1>Realtor Application</h1>
+        <p>This application allows a user to search for real estate and view a map of the property, integrated using the Google Maps API.</p>
+
+        <figure class="img-screenshot">
+          <img src="image/realtor/map.png" alt="Realtor Map Feature">
+          <figcaption>Map of Property</figcaption>
+        </figure>
+
+        <p>The user can also estimate a monthly mortgage payment using the calculator.</p>
+
+        <figure class="img-screenshot">
+          <img src="image/realtor/calculator.png" alt="Realtor Mortgage Calculator Feature">
+          <figcaption>Mortgage Calculator</figcaption>
+        </figure>
+
+        <p>And additionally, comps for the property van be viewed, integrated using the Zillow API. 
+
+        <figure class="img-screenshot">
+          <img src="image/realtor/comps.png" alt="Realtor Comps Feature">
+          <figcaption>List of Comps and Value</figcaption>
+        </figure>
+        
+
+        <h2>Findings from User Testing</h2>
+
+        <p>The app was coded to specifications provided to me, and while it’s relatively simple and straightforward to use, I did some user testing and discovered a few improvements that could be made (as well as a few bugs):</p>
+
+        <ul>
+            <li>In the loan calculator, the “Loan Amount” field should be filled in automatically based on the estimated value of the property returned from Zillow, rather than requiring the user to remember the amount and entering it themselves.</li>
+            <li>A “Down Payment” field should be added below the loan amount field so the user can see the effect varying down payment amounts have on the monthly payment.</li>
+            <li>The loan term field (“Number of Months”) should ask for the mortgage length in years rather than months, since mortgage terms are usually expressed in years.</li>
+            <li>There should be an indication of which tab (Map, Calculator, or Comps) is currently active.</li>
+            <li>“Add Property to List” is a bit vague. Consider changing it to “Save Property to List,” or add a sentence quickly explaining the feature.</li>
+            <li>Throw an error message if the property can’t be found.</li>
+            <li>Modernize the design.</li>
+        </ul>
+
+        <a href="http://realtorapplication-2.rmpp5ddwhm.us-west-2.elasticbeanstalk.com/">View the live app here.</a></p>
+
+        <div id="other_projects">
+          <div class="prev_project"></div>
+          <div class="next_project"></div>
+        </div>
+
+      </section><!--end subpage-->
+    </div><!--end container_projectpage-->
+    
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script>$(document).foundation();</script>
+    <script src="js/script.js" ></script>
+  </body>
+</html>

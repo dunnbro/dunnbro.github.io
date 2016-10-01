@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>America's Test Kitchen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/style_nofloat.css"> 
+  <link rel="stylesheet" href="css/foundation.min.css" />     
+</head>
+  <body>
+    <div class="container-projectpage">
+      <header class="return_home nav-down"><a href="index.html">BD</a></header>
+      <section class="subpage">
+
+        <h1>America's Test Kitchen</h1>
+        <p>America's Test Kitchen (ATK) is a media company that produces cookbooks, magazines, websites, and television shows, providing recipes and equipment reviews. Their mission is "to develop the absolute best recipes for all of your favorite foods" through extensive testing.</p>
+        <p>ATK was growing significantly, but had an outdated web presence, and needed to update its site to do a better job of showing what makes the company unique. My team created two new pages as part of an effort to attract high-quality talent to the company: a <b>Careers</b> page that tells the story of life inside ATK, and invites prospects to apply for a job, and an <b>About Us</b> page to introduce various members of the ATK team and to outline product offerings. The following details my contribution to the project.</p>
+        <p>I began by conducting competitor analysis on forward-thinking, desirable companies to work for (I determined which companies fit this description by polling Boston job seekers looking to work in the tech industry), and evaluating their jobs/careers pages in order to ensure that my proposed designs would adhere to current industry standards, and be in keeping with what job seekers might find on other career sites. I analyzed pages for One Technologies, Huge, Uber, Fresh Tilled Soil, Lounge Lizard, and Spotify. </p>
+
+        <h2>Careers Page</h2>
+
+        <p>The existing Careers page was a wall of text, and the few images and videos on the page were small thumbnails that opened new tabs to display full-sized images, rather than embedding them within the page. Inundating a user's browser with several new tabs is <a href="http://libux.co/links-should-open-in-the-same-window">a bad user experience</a>, and, additionally, this layout did little to showcase ATK's unique work environment and culture. </p>
+
+        <figure class="img-screenshot">
+          <img src="image/ATK__original_JOBS_1500.jpg" alt="ATK Original Jobs Page">
+          <figcaption>Original Jobs Page</figcaption>
+        </figure>
+
+        <p>I identified several common themes from my research, which informed my first design:</p>
+        <ul>
+            <li>Include a clear link to "open positions" at the top of the page, rather than requiring the user to scroll to the bottom of the page in search of them. Consider putting the actual open positions on a separate page.</li>
+            <li>Use a lot less copy/text, and more, larger images. Consider a hero image/video to quickly convey what it's like to work at the company.</li>
+            <li>Include testimonials from current employees.</li>
+            <li>There's no need to include a description of what ATK does on this page&mdash;this information can be put elsewhere, and will be of interest to people other than job seekers, so it’s not really a good place for it anyway. It's better suited for the About page, which should be linked to from the Careers page.</li>
+            <li>Create a logical flow that propels the user down the page as the case for working at the company is progressively built.</li>
+            <li>The site should be responsive.</li>
+        </ul>
+
+        <p>My first design incorporated these findings as follows:</p>
+        
+        <figure class="img-screenshot">
+          <a data-open="jobs_full">
+            <img src="image/ATK/jobs_desktop_v1.jpg" alt="America's Test Kitchen Proposed Jobs Page v1">
+          </a>
+          <figcaption>Proposed ATK Jobs Page version 1 <b>(Click to view full design)</b></figcaption>
+        </figure>
+        
+        <div id="jobs_full" class="reveal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+          <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h2 id="modalTitle">Jobs Page version 1</h2>
+          <img src="image/ATK/ATK_jobs_v1.png"</img>
+        </div>
+
+        <p>We presented this mockup to ATK staff, got feedback on the design from users (again, Boston-based job seekers looking to work in the tech industry), and incorporated suggestions from both groups into the next iteration.</p>
+        <ul>
+          <li>Testimonials were initially collapsed into a carousel, rather than stacked on top of each other. But after further research, I removed this feature due to <a href = "http://shouldiuseacarousel.com/">usability issues that arise from carousels</a>&mdash;they're frequently ignored, and, more importantly, present <a href = "http://www.creativebloq.com/accessibility-expert-warns-stop-using-carousels-7133778">accessibility problems</a>.</li>
+          <li>The order of "employee benefits" and "perks" sections was reversed. We found that the perks were more interesting than the benefits to potential job seekers, and needed more explanation. Job seekers assumed that they would be offered benefits, so there was no need to describe them in detail at this point&mdash;just a brief list was sufficient.</li>
+          <li>A more consistent style was adopted. Typography was selected, photos were added, and a graphic representing each perk was inserted to increase visual variation, and keep the site consistent with current web design trends.</li>
+          <li>Social media links were added.</li>
+        </ul> 
+
+        <figure class="img-screenshot">
+          <a data-open="jobs_full_v2">
+            <img src="image/ATK/jobs_desktop_v2.png" alt="America's Test Kitchen Proposed Jobs Page v2">
+          </a>
+          <figcaption>Proposed ATK Jobs Page version 2 <b>(Click to view full design)</b></figcaption>
+        </figure>
+
+        <div id="jobs_full_v2" class="reveal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+          <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h2 id="modalTitle">Jobs Page version 2</h2>
+          <img src="image/ATK/ATK_jobs_v2_edit.png"</img>
+        </div>
+
+        <p>This design was approved by the ATK team, with just a few formatting and cosmetic changes made later to keep the page consistent with the rest of the site.</p>
+
+        <h2>About Page</h2>
+        <p>The existing About page described ATK and its mission, and outlined its products, but also needed to include information about the executive staff, news items about ATK, social media, press info, contact info/support, sponsorship contact, affiliate program information, a newsletter signup, and a link to the Jobs page.</p>
+
+        <figure class="img-screenshot mobile">
+          <a data-open="about_full_v1">
+            <img src="image/ATK/iPhone6_about_thumb_v1.png" alt="America's Test Kitchen Proposed About Page v1">
+          </a>
+          <figcaption>Proposed ATK About Page version 1<br/><b>(Click to view full design)</b></figcaption>
+        </figure>
+
+        <div id="about_full_v1" class="reveal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+          <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h2 id="modalTitle">About Page version 1</h2>
+          <img src="image/ATK/iPhone6_about_full_v1.png"</img>
+        </div>
+
+        <p>Upon review of the design and user testing we found:</p>
+        <ul>
+          <li>A link to Careers site in the middle of the body of the page felt random and out of place to users, as did the newsletter signup form. The Careers link was moved to the top of the page, and the newsletter signup was removed altogether.</li>
+          <li>The "view more" button (which expands to show the entire executive staff when clicked) gave short shrift to the staff who did not appear “above the break,” and the button should be gotten rid of.</li>
+          <li>A feature was added that displayed full staff bios as an overlay when clicked.</li>
+          <li>The carousel for news articles should be removed (as mentioned above, carousels are often disregarded by users). Additionally, ATK had no inclination to commit staff time to updating this feature, so it would become quickly outdated.</li>
+          <li>"Back to Top" links were removed, because the page wasn't long or complicated enough to justify their use.</li>
+        </ul>
+        <p>I then implemented these findings into the next iteration of the page design.</p>
+
+        <figure class="img-screenshot mobile">
+          <a data-open="about_full_v2">
+            <img src="image/ATK/about_thumb_iphone-v2.png" alt="America's Test Kitchen Proposed About Page v2">
+          </a>
+          <figcaption>Proposed ATK About Page version 2<br/><b>(Click to view full design)</b></figcaption>
+        </figure>
+
+        <div id="about_full_v2" class="reveal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+          <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h2 id="modalTitle">About Page version 2</h2>
+          <img src="image/ATK/about_iphone-v2.png"</img>
+        </div>
+
+        
+
+      </section><!--end subpage-->
+      <!--Other prjects automatically generated by other otherProjects function-->
+        <div id="other_projects">
+          <div class="prev_project"></div>
+          <div class="next_project"></div>
+        </div>
+    </div><!--end container_projectpage-->
+    
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script>$(document).foundation();</script>
+    <script src="js/script.js" ></script>
+  </body>
+</html>

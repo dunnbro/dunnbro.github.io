@@ -1,0 +1,332 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+* {
+	margin:0; 
+	padding:0;
+}
+
+/* @font-face {
+    font-family: body-font;
+    src: url("../font/Jaapokki-Regular.otf") format("opentype");
+} */
+
+video {
+/* 	position: absolute; */
+	width: 100%;
+	z-index: -10;
+/* 	animation: pulse 1s ease infinite; */
+/* 	-webkit-filter: url("#convolve"); 
+	filter: url("#convolve"); */
+}
+
+/* video { transition: all 2s ease-in-out; }
+video:hover { transform: scale(1.1); }
+ */
+body {
+	/*font-family: "Trebuchet MS", Helvetica, sans-serif;*/
+	font-family: 'Lato', sans-serif;
+	color: #474545 ;
+	font-weight: 100;
+	margin-top: -10px;
+}
+
+
+
+h1 {
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 9vw;
+}
+
+.videoOverlay p {
+	font-size: 24px;
+}
+
+h2 {
+	clear:both;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	text-align:center;
+	color: ;
+	text-transform: uppercase;
+
+}
+
+.container {
+	margin: 0 auto;
+}
+
+
+
+.innerHeaderContainer {
+	position: relative;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	 
+}
+
+.videoOverlay {
+  background: rgba(0,0,0,0);
+  display: block;
+  position: absolute;
+  top: 19vw; right: 0; bottom: 0; left: 0;
+  align-items: center;
+  justify-content: center;
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 81%, rgba(255,255,255,1) 89%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.9) 81%,rgba(255,255,255,1) 89%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.9) 81%,rgba(255,255,255,1) 89%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+hr {
+	border: 1px solid black;
+}
+
+section {
+	clear: both;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 40px;
+	
+/* 	background-color: #FFFFFF; */
+	display: block;
+	align-items: center;
+	justify-content: center;
+	
+ 	text-align: center;
+ 	max-width: 750px;
+}
+
+.innerContent {
+/* 	position: relative; */
+
+}
+
+.wrap {
+	margin: 0 auto;
+	position: relative; 
+	margin-top: -175px;	
+	 overflow: hidden;
+       
+/* 	background-color: #FDFDFD; */
+}
+
+.box {
+	   border: 1px solid #474545;
+       display: inline-block;
+       position: relative;
+       max-width: 30%;
+       padding-bottom: 20%;
+       height: 100px;
+       
+
+}
+    
+.boxInner {
+       position: absolute;
+       left: 1px;
+       right: 1px;
+       top: 1px;
+       bottom: 1px;
+       overflow: hidden;
+}
+    
+
+.boxInner img {
+      width: 100%;
+      padding: 15px; 
+}
+
+.boxInner .titleBox {
+   position: relative;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin-bottom: -50px;
+   background: #000;
+   background: rgba(0, 0, 0, 0.5);
+   color: #FFF;
+   padding: 10px;
+   text-align: center;
+   -webkit-transition: all 0.3s ease-out;
+   -moz-transition: all 0.3s ease-out;
+   -o-transition: all 0.3s ease-out;
+   transition: all 0.3s ease-out;
+}
+
+/* 
+.articleContainer {
+	display: inline-block;
+	flex: auto;
+	width: 250px;
+	margin: 0px 2px; 
+	height: 250px;
+	border: 1px solid #C3D0D6 ;
+	background: rgba(135, 142, 138, .02); 
+	position: relative;
+	text-align: center;
+	justify-content: center;
+	font-size: 12px;
+}
+
+.articleAbsolute {
+	position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    overflow: hidden;
+}
+
+.articleAbsolute img{
+	background-size: cover;
+}
+
+article a, p {
+	align-self: flex-end;
+	padding-bottom: 5px;
+} */
+
+/* article a {
+	display: flex;
+	flex: auto;
+	min-width: 150px;
+	text-decoration: none;
+} */
+
+.footer {
+
+	text-align: center;
+	margin-top:100px;
+	padding-top: 10px; 
+	padding-bottom: 10px;
+	font-size: 12px;
+	font-weight: 300;
+	background-color: #FCFCFC;
+	display:flex;
+	text-align: center;
+	justify-content: center;
+	text-transform: uppercase
+}
+
+.footer a { 
+	list-style: none;
+	text-decoration: none;
+	color:#000;
+	padding: 0px 10px;
+}
+
+.footer a:hover {
+	color: #ffb3e6;
+}
+
+.footer li {
+	display: inline;
+	
+
+}
+
+@media only screen and (max-width : 480px) {
+       /* Smartphone view: 1 tile */
+       .box {
+          width: 100%;
+          padding-bottom: 100%;
+       }
+
+       .wrap {
+       	 
+       	  max-width: 75%;
+       	  margin: 0 auto
+       }
+
+       h1 {
+       	font-size: 30px;
+       }
+
+       .videoOverlay p {
+       	font-size: 18px;
+       }
+
+       h2 {
+       	font-size: 16px;
+       }
+    }
+    @media only screen and (max-width : 650px) and (min-width : 481px) {
+       /* Tablet view: 2 tiles */
+       .box {
+          width: 50%;
+          padding-bottom: 50%;
+       }
+
+       .wrap {
+       	  
+       	  width: 90%;
+       	  margin: 0 auto;
+       	  margin-top: -30px;
+       }
+    }
+    @media only screen and (max-width : 1050px) and (min-width : 651px) {
+       /* Small desktop / ipad view: 3 tiles */
+       .box {
+          width: 33.3%;
+          padding-bottom: 33.3%;
+       }
+
+       .wrap {
+       	  width: 90%;
+       	  margin: 0 auto;
+       	  margin-top: -70px;
+       }
+
+     
+    }
+    @media only screen and (max-width : 1290px) and (min-width : 1051px) {
+       /* Medium desktop: 4 tiles */
+       .box {
+          width: 25%;
+          padding-bottom: 25%;
+       }
+    }
+
+
+/* @media only screen and (min-width: 1100px) {
+	.videoOverlay {
+		top: 20vw;
+	}
+}
+
+@media only screen and (max-width: 660px) {
+
+
+	.videoOverlay {
+		top: 15vw;
+	}
+
+	.videoOverlay h1 {
+		font-size: 30px;
+	}
+
+	.videoOverlay p {
+		font-size: 18px;
+	}
+	
+	.content {
+		margin-top: -60px;
+	}
+	section {
+
+		display: -webkit-flex;
+  		-webkit-flex-direction: column;
+
+	}
+
+	article {
+		width: 95%;
+		max-width: 380px;
+		margin-bottom: 10px;
+	}
+} /* Narrow */ */
