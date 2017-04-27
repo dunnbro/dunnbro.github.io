@@ -30,6 +30,14 @@ body {
   margin-top: -10px;
 }
 
+.subpage a, a:visited {
+    text-decoration: underline; 
+}
+
+a:visited {
+ color: #551A8B; 
+}
+
 .return_home {
   transition: top 0.25s ease-out;
   position: fixed;
@@ -367,6 +375,22 @@ h2#modalTitle{
   margin: 0 auto;
   width: 217px;
 
+
+}
+
+.img-screenshot.mobile-365 img{
+  display: block;
+  margin: 0 auto;
+  width: 365px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated; /* Chrome */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+  
+
 }
 
 
@@ -406,6 +430,19 @@ h2#modalTitle{
 .nobullets {
   list-style: none;
 }
+
+/*for long list of utterances*/
+.no-spacing li{
+  line-height: 12px;
+  white-space: nowrap;
+}
+
+.no-background-code {
+  margin:0;
+  padding:0;
+  border:0;
+}
+
 
 @media only screen and (max-width : 480px) {
        /* Smartphone view: 1 tile */

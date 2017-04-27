@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>"Savage Love" Alexa Skill</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/foundation.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" type="text/css" href="css/style_nofloat.css">     
+  </head>
+  <body id="alexa-skill">
+    <div class="container-projectpage">
+      <header class="return_home nav-down"><a href="index.html">BD</a></header>
+      <section class="subpage">
+        <h1>"Savage Love" Alexa Skill</h1>
+        <h2>Overview</h2>
+        <p>This Amazon Alexa skill allows a user to ask Alexa to play back the <a href="https://www.thestranger.com/archive/savage-love">"Letter of the Day”</a> from Savage Love, a popular dating and relationship advice column. These letters are typically short, so my thought was that users could listen to the letter during interim moments between other activities, or when they have a few moments to spare before or after larger events in their day, perhaps as they’re getting their breakfast ready before work, or when they’re waiting for dinner to finish.</p>
+
+        <p>In all honesty, I wasn’t sure that the skill would be something anyone would actually want to use. So I developed a <a href= https://crew.co/how-to-build-an-online-business/mvp-minimum-viable-product-example>“minimum viable product</a>,” crucial component of the <a href="http://theleanstartup.com/principles">Lean Startup Methodology</a>, to test the app with actual users and learn as much as possible before spending too much time actually coding it.</p>
+
+        <p>I knew that Alexa sounded quite natural in short bursts&#8212;perhaps a few sentences at a time&#8212;but that the speech it produces isn’t perfect. Since this application would require Alexa to read back, on average, two to three minutes of synthesized speech per letter, would users become irritated? Would the colloquial language and acronyms often found in the letters and responses be read back incorrectly by the Alexa engine, confusing users to the point where they lose track of what’s being read to them? Rather than diving right in with development of the skill, I made a prototype that I could test on others and try to find answers to these questions.</p>
+
+        <h2>Approach and Design</h2>
+        <p>When creating Voice User Interfaces (VUI), it is arguably even more important than in graphical user interfaces (GUI) to provide feedback to the user, telling them what actions they can take at what time, and assuring them that they’re in the right place. In contrast to graphical interfaces, in which standards and conventions that most users are familiar with have arisen over time, VUIs are still novel and unfamiliar to many people, so extra guidance is needed.</p>
+
+        <p>For example, a user might say “Open Savage Love,” but they might not specify their intent, because they aren’t sure what the possibilities are. In this case, they have to be informed of their options, but without being overwhelmed by them. <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-design-best-practices">No more than three possibilities</a> should be presented to the user at a time, so if the user opens the skill without saying what it is they want to do, Alexa tells them they can “listen to today’s letter,” “listen to yesterday’s letter,” or “listen to a random letter.”</p>
+
+        <p>If the user is already familiar with the skill and does know what they want to do, they can open it and say their intent all at once. They might say, for example, “Open Savage Love and play the letter of the day for today.” The chart below shows the basic interaction a user can have with the skill:</p>
+
+        <figure class="img-screenshot">
+          <a data-open="alexa_flow">
+            <img src="image/alexa/alexa_flow.png" alt="Alexa Flow">
+          </a>
+          <figcaption>Basic Flow of the Skill</figcaption>
+        </figure>
+
+        <p>Alexa skills <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/overviews/understanding-custom-skills">require the following components:</a></p>
+        <ul>
+          <li>An <strong>Invocation Name</strong>, which the user says to open and use your skill. In this case, the invocation name is “Savage Love.”</li>
+          <li><strong>Intents</strong>, or “actions that users can do with your skill,” specified in the skill's code. In this case, the intent is <code>getletteroftheday</code>, which, upon request, gets a letter and plays it back to the user.</li>
+          <li><strong>Utterances</strong>, which are phrases the user says to invoke these intents; for example, “play the letter of the day for <em>today</em>.” Utterances also contain <em>slots</em>, or possible values&#8212;in this case, “<em>today</em>.” If the user had requested yesterday’s letter, the slot value would be "<em>yesterday</em>."</li>
+          <li><strong>Code</strong> that accepts interpreted speech data from Alexa and performs the necessary actions. In this case, this is the code I wrote to get the requested letter and return it to Alexa to be read to the user.</li>
+        </ul>
+
+        <p>So, the Alexa engine will listen to the user's request, and break it down as follows:</p>
+        <figure class="img-screenshot">
+          <a data-open="alexa_request_breakdown">
+            <img src="image/alexa/request_sentence_breakdown.png" alt="Alexa Request Breakdown">
+          </a>
+          <figcaption>Components of the Alexa request</figcaption>
+        </figure>
+
+        <p>Because there are so many different ways people can ask for the same thing, utterances need to be provided to the Alexa service by the developer to ensure that Alexa correctly interprets what the user is asking for. I tried to think of as many different ways that a user might ask for the letter of the day as I could. Of course, I wouldn't know for sure how people would make their requests until I tested, but I used <a href="sample_utterances_page.html">these 70</a> as a starting point.</p>
+
+        
+        <!--<p>To summarize: the "Savage Love" <strong>invocation name</strong> lets Alexa know where to send the request&#8212;that it should be sent to the <strong>Savage Love code</strong>, as opposed to some other Alexa skill's code. The <strong>utterance</strong> tells the code which <strong>intent</strong> is desired&#8212;that the user wants the Savage Love code to run the <code>getletteroftheday</code> function in the code, and get them the letter of the day for yesterday.</p>-->
+
+        
+        
+        <h2>Creating the Prototype</h2>
+
+        
+        <p>Creating prototypes for voice user interfaces (VUI) poses more of a challenge than creating them for graphical user interface (GUI). Whereas Sketch, Photoshop, InVision, Adobe XD, and others are all available to quickly create visual prototypes, similar VUI prototyping options are not yet available.</p>
+        <p> Therefore, some programming was necessary in order to conduct user tests, though I did try to simplify as much as possible. For instance, rather than writing code to actually find letters for today, yesterday, and a random day in the past, I simply hard-coded the skill to play back particular letters (so, for instance, if a user asked for a "random" letter to be read to them, the letter for January 14 would always play back, rather than a truly random letter). This dramatically cut down on development time, while still allowing me to sufficiently test the skill’s functionality and observe how users interact with it. The code is admittedly very rough, and it was a little difficult not to spend time refactoring and optimizing it, but my intent was to write something that was good enough to test as quickly as possible as an exercise in rapid prototyping. <strong>View the prototype code <a href="https://github.com/dunnbro/Alexa---Savage-Love-prototype-code/blob/master/index.js">here</a></strong>.</p>
+
+        <p>I used the RSS feed for Savage Love to get the letters, and I used node.js and several node packages including <a href="https://www.npmjs.com/package/alexa-app">alexa-app</a>, <a href="https://www.npmjs.com/package/feedparser">feedparser</a>, and <a href="https://www.npmjs.com/package/striptags">striptags</a> to write the prototype.</p>
+
+        <p>The skill functions as follows:</p>
+        <ul>
+          <li>The user requests a letter. For example “Alexa, open Savage Love and play the letter for today.”</li>
+          <li>Amazon/Alexa interprets the speech as outlined above, and sends the information to my service for processing.</li>
+          <li>My service gets the RSS data from The Stranger’s <a href="http://www.thestranger.com/seattle/Rss.xml?author=259">RSS feed</a>, gets the letter for the requested date from this feed, formats it (stripping html tags and other extraneous information out), and sends the information back to the Alexa server.</li>
+          <li>Alexa reads the letter to the user.</li>
+        </ul>
+
+        <h2>User Testing</h2>
+        <p>I presented users with the following simple scenario:</p>
+
+        <p><em>“You want to listen to a Savage Love Letter of the Day. Ask Alexa for it.”</em></p>
+
+        <p>I had to provide some basic guidance on how to interact with Alexa for users, some of whom were totally unfamiliar with it. I informed them that in order to ask Alexa to do something, they have to use the wake word “Alexa,” and that the invocation name “Savage Love” had to be used to open and interact with the skill.</p>
+
+        <p>But I was especially careful not to give them specific words to use to access letters, since I wanted to try to collect as many natural utterances as possible. There are hundreds of slight variations in the way people can ask for the same thing, and unlike in GUIs where the visuals (ideally) provide affordances to the user, immediately showing them what the possibilities for interaction are, things are not so apparent in voice interfaces. So I provided minimal guidance to  users during testing, so I could determine if the affordances programmed into the skill provided enough information to the user.</p>
+
+        <p>Results were as follows:</p>
+        <ul>
+          <li>The <a href="sample_utterances_page.html">70 utterances</a> I started with didn't cover all the different ways people asked for letters. But Alexa was able to understand some of the requests anyway, and in cases where the request couldn't be recognized, the reprompt I included ("I didn’t hear that. Would you like to hear today’s letter, yesterday’s, or a random letter?") was sufficient to guide the user to make a request that could be understood by Alexa.</li>
+          <li>There was an approximately 10 second delay between the user’s request for a letter and the response. This could be due to the way the prototype’s unoptimized code was written. After about 4-5 seconds, users expected a response, and hearing none, usually repeated their request. An initial acknowledgement of the request needs to be given that lets the user know their request has been received and is processing (a VUI equivalent to a <a href="https://codepen.io/psyonline/pen/yayYWg">loading animation</a>). The light around the top rim of the Alexa device does glow blue when processing, but since Alexa is a voice-powered device, visual feedback doesn’t make much sense, since users will most likely not be looking at the device when interacting with it.</li>
+          <li>Everyone used “partial intents” at first&#8212;meaning they said something to the effect of “Open Savage Love and play a letter,” without specifiying which letter. Handling of partial intents has to be dealt with better. Currently, the response in this case is the generic error message, “I didn’t hear that. Would you like to hear today’s letter, yesterday’s, or a random letter?” The “I didn’t hear that” phrase needs to be removed in this case.</li>
+          <li>Alexa’s voice unfortunately does become irritating to some users after a minute or so of uninterrupted speaking. The synthesized voice, while intelligible and quite convincing at times, does not always pause naturally, and is often thrown off by the slangy language found in the letters. Alexa’s sometimes strange inflection can make the letters a bit difficult to follow. In particular, there needs to be more of a separation between where the question ends and the response begins.</li>
+          <li>The subject matter of the column deals with sexual issues, and some users found it a bit silly to hear a synthetic voice speaking about this kind of subject matter.</li>
+          <li>In the column, advice-seekers sign their letters with a phrase that forms a relevant acronym (e.g., one letter was signed “Meditating on Moneymaking,” which forms the acronym "MOM," so the advice-seeker was addressed as “MOM” throughout the response). But for users unfamiliar with this convention, this was confusing and unclear&#8212;users weren't sure why Alexa kept saying "Mom."</li>
+          <li>If there’s no letter of the day for today, how should this be handled? Is the most recent letter found? Alexa should say something like, “There’s no letter for today, but here’s the most recent letter.”</li>
+        </ul>
+
+        <h2>Next Steps and Final Thoughts</h2>
+        <p>The consensus seemed to be that, with some improvements, regular readers of the column might find this skill useful. Only one of the test participants (out of four) had read Savage Love before, and she was a sporadic reader. After making improvements, I hoped to test it with regular readers.</p>
+
+        <p>Unfortunately, I hadn’t considered that I wouldn’t be allowed to publish this skill on Amazon for others to download and use, since I don’t have legal permission to distribute the column. Amazon is quite strict about ensuring that skills don’t make use of any unauthorized intellectual property. Luckily, since this was developed as a minimum viable product, I hadn’t spent too much developing it. As it turns out, this product is probably not viable, but due to unforeseen legal reasons, rather than it not being especially useful.</p>
+
+        <p>I plan to contact The Stranger, the publisher of Savage Love, to see about getting permission to publish the skill, but I’m not particularly optimistic that I’ll get it. However, developing and testing the skill was a very valuable learning experience, and the possibilities for voice-controlled applications are very exciting. In this specific case, requesting the letter of the day just by asking for it is far easier and more natural than looking it up on the website or newsreader on one’s computer or mobile device. It also allows the user to multitask, quickly accessing and consuming the letter while remaining free to do other things simultaneously.</p>
+
+        <p>Many industries, such as <a href="https://skift.com/2016/09/27/expedia-priceline-founders-say-voice-based-search-is-the-next-frontier-in-travel">travel</a>, see voice-based interaction as the "next frontier" in computing. The challenge, they say, will be dealing with the "unstructured queries" of voice-based computing. Indeed, even in this Alexa application, which was quite simple, users often phrased their requests in unexpected ways. Therefore, careful design of VUIs, based on extensive research and testing, will be crucial to allow users to accomplish their desired tasks while still maintaining the natural, conversational interactions that make voice-based computing so appealing.</p>
+
+
+     
+
+        <div id="other_projects">
+          <div class="prev_project"></div>
+          <div class="next_project"></div>
+        </div>
+      </section><!--end subpage-->
+    </div><!--end container_projectpage-->
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script>$(document).foundation();</script>
+    <script src="js/script.js" ></script>
+  </body>
+</html>
