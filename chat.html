@@ -13,8 +13,10 @@
       <header class="return_home nav-down"><a href="index.html">BD</a></header>
       <section class="subpage">
         <h1>Chat Application</h1>
-        <p>This node.js-based chat was built using the Express.js and Socket.IO frameworks. It allows users to send messages to everyone in the Main Room, as well as send private chats to any user.</p>
-
+        <h2>Overview</h2>
+        <p>This is a straightforward chat application built using node.js. A chat room is admittedly a very common application for developers to build when learning a server-side language, but in addition to implementing the usual "main room" where users can chat publicly, I added private chat functionality. I also focused on the chat experience, implementing <a href="https://jqueryui.com/">jQuery UI</a> features, including sliding effects when opening private chat tabs, and glowing tabs when a new private chat is sent, in order to provide feedback to users when they successfully perform actions within the interface.</p>
+        
+        <h2>Feature Examples</h2>
         <p>Below, Skye chats with everyone in the Main Room (the orange “Main Room” tab indicates who she’s talking to). She also carries on private conversations with Angie and Alice, and the alternating pink/red glow of Angie’s tab indicates that there’s an unread message from her. Skye can switch between conversations by clicking the tabs in the chat area, or by clicking a username in the list.</p>
 
         <figure class="img-screenshot chat">
@@ -22,16 +24,25 @@
           <figcaption>Main Room chat</figcaption>
         </figure>
 
-        <p>Skye wants to start a private chat with Jackie, so she clicks Jackie’s name in the Users Present list. Jackie’s name turns orange in the list, and an orange “Jackie” tab opens below the message area. When Skye sends the message, a “Skye” tab opens on Jackie’s computer and displays the message, and Skye’s name turns orange in the user list. </p>
+        <p>Skye wants to start a private chat with Jackie, so she clicks Jackie’s name in the "Users Present" list. Jackie’s name turns orange in the list, and an orange “Jackie” tab slides open below the message area. When Skye sends the message, a “Skye” tab opens on Jackie’s computer and displays the message, and Skye’s name turns orange in the user list. </p>
 
         <figure class="img-screenshot chat">
           <img src="image/chat/PrivateChatJacky_670x360.gif" alt="Private Chat Room Example">
           <figcaption>Private chat</figcaption>
         </figure>
         
-        <ul>
-          <li>View the Chat GitHub repo <a href="https://github.com/dunnbro/chat">here</a></li>
+        <h2>User Testing and Conclusions</h2>
+        <p>After a bit of a struggle to get the application running on a server, I invited a few friends to chat. Most people are familiar with chat interfaces, and this chat application adheres quite closely to the standards that have arisen over time. A few minor issues surfaced: 
+          <ul>
+            <li>There should be notifications when users enter or leave the chat.</li>
+            <li>If a private chat tab is closed, but then chat between the same users is resumed, any previous conversation should appear in the re-opened private chat window. Currently, chats clear once a tab is closed, which can create confusion if one user leaves the tab open on their computer, while the other closes the tab and loses the previous conversation.</li>
+            <li>Opening more than 5 private tabs at a time breaks the interface.</li>
+            <li>Some said the interface was too basic, while others appreciated the "<a href="http://brutalistwebsites.com/">brutalist</a>" aesthetic, and liked the mixture of a "Web 1.0" page layout with modern UI animations and effects.</li>
         </ul>
+
+        <p>Additionally, after reading Don Norman's <em>The Design of Everyday Things</em>, I realized that the "Users Present" list, and the mechanism to initiate private chat was poorly designed. As Norman notes, "Whenever you see hand-lettered signs pasted on doors, switches, or products, trying to explain how to work them, what to do and what not to do, you are also looking at poor design. (pg. 14)" Similarly, I shouldn't need to explain to users that they can click on names in the list to start a private chat, I should instead provide <a href="http://jnd.org/dn.mss/signifiers_not_affordances.html">signifiers</a> that tell the user "what actions are possible and how they should be done." Names in the list should be made to appear clickable&#8212;one way would be to style them as hyperlinks&#8212;so that the possible interaction with the interface is perceivable to the user.</p>
+        <p>View the Chat GitHub repo <a href="https://github.com/dunnbro/chat">here</a>.</p>
+        
 
         <div id="other_projects">
           <div class="prev_project"></div>

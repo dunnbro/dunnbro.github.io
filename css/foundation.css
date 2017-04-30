@@ -361,7 +361,7 @@ th {
   padding: 0; }
 
 .foundation-mq {
-  font-family: "small=0em&medium=40em&large=64em&xlarge=75em&xxlarge=90em"; }
+  font-family: "small=0em&medium=43em&large=64em&xlarge=75em&xxlarge=90em"; }
 
 html {
   font-size: 100%;
@@ -510,7 +510,7 @@ h5 {
 h6 {
   font-size: 1rem; }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 43em) {
   h1 {
     font-size: 3rem; }
   h2 {
@@ -639,7 +639,7 @@ kbd {
 .text-justify {
   text-align: justify; }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 43em) {
   .medium-text-left {
     text-align: left; }
   .medium-text-right {
@@ -733,7 +733,7 @@ kbd {
     max-width: none;
     margin-left: -0.625rem;
     margin-right: -0.625rem; }
-    @media screen and (min-width: 40em) {
+    @media screen and (min-width: 43em) {
       .row .row {
         margin-left: -0.9375rem;
         margin-right: -0.9375rem; } }
@@ -751,7 +751,7 @@ kbd {
   float: left;
   padding-left: 0.625rem;
   padding-right: 0.625rem; }
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 43em) {
     .column, .columns {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem; } }
@@ -1034,7 +1034,7 @@ kbd {
   margin-right: 0;
   float: left; }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 43em) {
   .medium-1 {
     width: 8.33333%; }
   .medium-push-1 {
@@ -1862,7 +1862,7 @@ html.is-reveal-open body {
   overflow-y: auto; }
   [data-whatinput='mouse'] .reveal {
     outline: 0; }
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 43em) {
     .reveal {
       min-height: 0; } }
   .reveal .column, .reveal .columns,
@@ -1870,26 +1870,26 @@ html.is-reveal-open body {
     min-width: 0; }
   .reveal > :last-child {
     margin-bottom: 0; }
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 43em) {
     .reveal {
       width: 600px;
       max-width: 75rem; } }
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 43em) {
     .reveal .reveal {
       left: auto;
       right: auto;
       margin: 0 auto; } }
   .reveal.collapse {
     padding: 0; }
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 43em) {
     .reveal.tiny {
       width: 30%;
       max-width: 75rem; } }
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 43em) {
     .reveal.small {
       width: 50%;
       max-width: 75rem; } }
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 43em) {
     .reveal.large {
       width: 90%;
       max-width: 75rem; } }

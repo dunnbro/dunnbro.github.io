@@ -6,8 +6,8 @@
 if ( $('#home-page').length ) {
     window.onbeforeunload = function () {
         window.scrollTo(0,0);
-    }
-};
+    };
+}
 
 
 var iOS = /iPad|iPhone|iPod/.test(navigator.platform);
@@ -89,22 +89,7 @@ if ($('.wrap').isOnScreen) {
             }, 2000);
         }
     );
-
-	/*$("h1, .videoOverlay p").css({
-    		"text-align": "center"
-    	});
-    $("h1, .videoOverlay p").each(
-
-    	function(){
-    		$(this).animate({
-    			"padding-left" : "0px",
-    			
-    		}, 200);
-    	}
-	
-    	
-   );*/
-};
+}
 
 //Gets links to projects from index.html and generates previous and next project links 
 //gets other projects from index.html (front page)
@@ -159,12 +144,17 @@ var otherProjects = function() {
         });
     });
 
-$(window).on ('load', function() {
+$(window).on ('load resize', function() {
+
+var cur_height = $('.variable_scroll_slower').height()+1;
+$('.variable_scroll_slower').css('height', cur_height - 1 + 'px');
+console.log(cur_height);
 //parallax effect on home page -- background elements must be position:fixed
     $(window).scroll(function(e){
       parallax();
     });
 
+    
     function parallax(){
       var scrolled = $(window).scrollTop();
       $('.variable_scroll_slower').css('top',-(scrolled*0.3)+'px');
@@ -242,7 +232,7 @@ var hideHeader = function (){
         
         lastScrollTop = st;
     }
-}
+};
 
 hideHeader();
 
@@ -264,6 +254,8 @@ $('video.variable_scroll_faster').animate({
     opacity: 1,
 }, 1000, function() {
 });
+
+
 
 /*Mutation observer will listen for changes to 'reveal-overlay' class of modals.
 When it detects a change, the '.return_home' menu bar will get hidden (with class 'nav-up').
@@ -290,7 +282,7 @@ $(function() {
             });
 
         }
-    }
+    };
 })(jQuery);
 
 //Now you need to append event listener
@@ -361,7 +353,7 @@ $(function(){
     }*/
     //$('#other_projects').text($.inArray (currentPage, pageTitles));
     
-}
+};
 
 otherProjects();
 

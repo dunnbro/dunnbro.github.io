@@ -13,20 +13,27 @@
       <header class="return_home nav-down"><a href="index.html">BD</a></header>
       <section class="subpage">
         <h1>npm Paginator</h1>
-        <p>This node.js package allows a site developer to easily split a long piece of writing (or any html) into smaller sections, and automatically generates chapter nagivation. For example, on the site shown below, the developer has split a piece of writing into seven pages. The "first" and "prev" buttons are disabled since the first page is currently showing.</p>
+        <h2>Overview</h2>
+        <p>There is an ongoing debate about whether or not pagination is the right design approach to use when dealing with large amounts of data on a web page, but the appropriateness of pagination seems to hinge on both the content and context of the data. It is generally agreed that <a href="https://www.nngroup.com/articles/item-list-view-all/">e-commerce pages</a> should be paginated, but in other situations <a href="https://www.bennadel.com/blog/2951-the-user-experience-ux-of-pagination.htm">it might not be appropriate</a>. Should a designer decide to paginate content, this node.js package allows them to easily split the content into smaller sections, and automatically generates nagivation. 
+
+        <h2>Usage</h2>
+        For example, on the site shown below, Paginator has split a piece of writing into seven pages. The "first" and "prev" buttons are disabled since the first page is currently showing.</p>
 
         <figure class="img-screenshot">
           <img src="image/paginator/page1.png" alt="Paginator Example">
           <figcaption>A paginated site, showing automatically-generated navigation</figcaption>
         </figure>
 
-        <p>Adding the "storySection" class to a section of HTML will create a new section. For instance, in this <a href="https://github.com/dunnbro/pagination/blob/master/demo/index.html">demo</a>, each &ltdiv&gt with the class "js-pageSection" would be shown on its own page.</p>
+        <p>Adding the "storySection" class to a section of HTML will create a new page. For instance, in this <a href="https://github.com/dunnbro/pagination/blob/master/demo/index.html">demo</a>, each &ltdiv&gt with the class "js-pageSection" would be shown on its own page.</p>
 
         <p>Paginator also adds a location.hash value to the url, so that sections can be linked to directly. For example, "http://www.example.com/test#section2" would link directly to page 2 of the page http://www.example.com/test.</p>
-        <ul>
-          <li>View the npm page for Paginator <a href="https://www.npmjs.com/package/jquery-mock-paginator">here</a></li>
-          <li>View the Paginator GitHub repo <a href="https://github.com/dunnbro/pagination">here</a></li>
-        </ul>
+        
+
+        <h2>Notes</h2>
+        <p>Whereas on most other projects I have designed and developed with a general, non-technical audience in mind, in this case, I was creating something that other developers would be using in their projects. I spent a great deal of time researching technical documentation and consulting with other, more experienced developers to ensure that the documentation I wrote for Paginator would meet the expectations of node.js developers.</p>
+          <p>View the Paginator GitHub repo <a href="https://github.com/dunnbro/pagination">here</a>, and the npm page for Paginator <a href="https://www.npmjs.com/package/jquery-mock-paginator">here</a>.</p>
+          
+        
         <div id="other_projects">
           <div class="prev_project"></div>
           <div class="next_project"></div>
